@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sin x artsy | Handcrafted with Love</title>
+    <meta name="description" content="Bespoke handcrafted creations — gift hampers, bouquets, resin art, crochet and more. Crafted with uncompromising passion.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+
+    <!-- Butterfly Cursor -->
+    <div id="butterfly-cursor">
+      <svg viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Upper left wing -->
+        <path class="wing-ul" d="M60 50 C45 25 10 18 6 38 C2 54 28 65 60 50Z" fill="rgba(212,175,55,0.9)"/>
+        <!-- Lower left wing -->
+        <path class="wing-ll" d="M60 50 C46 56 16 74 18 62 C20 50 40 46 60 50Z" fill="rgba(212,175,55,0.7)"/>
+        <!-- Upper right wing -->
+        <path class="wing-ur" d="M60 50 C75 25 110 18 114 38 C118 54 92 65 60 50Z" fill="rgba(212,175,55,0.9)"/>
+        <!-- Lower right wing -->
+        <path class="wing-lr" d="M60 50 C74 56 104 74 102 62 C100 50 80 46 60 50Z" fill="rgba(212,175,55,0.7)"/>
+        <!-- Body -->
+        <ellipse cx="60" cy="52" rx="3.5" ry="16" fill="#F7E270"/>
+        <!-- Antennae -->
+        <path d="M57 37 Q46 18 40 10" stroke="#D4AF37" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <path d="M63 37 Q74 18 80 10" stroke="#D4AF37" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <circle cx="40" cy="10" r="3" fill="#F7E270"/>
+        <circle cx="80" cy="10" r="3" fill="#F7E270"/>
+      </svg>
+    </div>
+
+    <!-- Background butterflies canvas -->
+    <canvas id="bg-butterflies"></canvas>
+
+    <!-- Atmospheric Parallax Dust -->
+    <div class="parallax-dust dust-1"></div>
+    <div class="parallax-dust dust-2"></div>
+    <div class="parallax-dust dust-3"></div>
+    <div class="parallax-dust dust-4"></div>
+
+    <!-- Noise overlay for premium film grain -->
+    <div class="noise-overlay"></div>
+
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+      <div class="logo">sin x artsy</div>
+      <nav>
+        <ul>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#shop" class="nav-link">Shop</a></li>
+          <li><a href="#categories" class="nav-link">Categories</a></li>
+          <li><a href="#custom" class="nav-link">Custom Orders</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="side-text-left">
+        <span>SIN X ARTSY &mdash; EST. 2026</span>
+      </div>
+
+      <div class="canvas-container">
+        <canvas id="video-canvas"></canvas>
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="hero-layout">
+        <div class="hero-content">
+          <div class="hero-eyebrow" id="hero-eyebrow">
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-text">Handcrafted Luxury</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="title-static">Crafted with</span><br>
+            <span class="title-rotating-wrapper">
+              <span class="title-rotating" id="rotating-word">Passion</span>
+            </span>
+          </h1>
+
+          <p class="hero-subtitle" id="hero-subtitle">
+            Bespoke creations. Uncompromising quality.<br>
+            Handmade art for those who value the extraordinary.
+          </p>
+
+          <div class="hero-buttons" id="hero-buttons">
+            <button class="btn btn-primary btn-glow magnetic-btn">Discover the Collection</button>
+            <button class="btn btn-outline magnetic-btn">Request Custom</button>
+          </div>
+
+          <div class="hero-stats" id="hero-stats">
+            <div class="stat">
+              <span class="stat-number" data-count="240">0</span>
+              <span class="stat-label">Designs</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Handmade</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-number">Premium</span>
+              <span class="stat-label">Quality</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Aesthetic Wrapper (Seamless Transition) -->
+    <div class="floral-aesthetic-section">
+      <!-- Bloom Particles Overlay (Positioned Absolute on Seam) -->
+      <div class="bloom-particle-container" id="bloom-particles"></div>
+      
+      <!-- Bloom Content (Part of Document Flow) -->
+      <div class="bloom-overlay-content">
+        <div class="card glass-card tilt-card" style="max-width: 600px; margin: 0 auto;">
+          <h2 style="font-family: var(--font-serif); font-size: 3rem; margin-bottom: 0.5rem; color: #D4AF37;">Natural Elegance</h2>
+          <p style="font-family: var(--font-sans); color: #eee; margin-bottom: 2rem; font-size: 1.1rem;">Handpicked aesthetics, crafted with passion.</p>
+          <button class="btn btn-outline magnetic-btn">Explore Collection</button>
+        </div>
+      </div>
+      <!-- Infinite Marquee Ticker -->
+    <div class="marquee-strip" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Gift Hampers</span><span class="marquee-dot">✦</span>
+        <span>Bouquets</span><span class="marquee-dot">✦</span>
+        <span>Resin Art</span><span class="marquee-dot">✦</span>
+        <span>Crochet</span><span class="marquee-dot">✦</span>
+        <span>Embroidery</span><span class="marquee-dot">✦</span>
+        <span>Jewellery</span><span class="marquee-dot">✦</span>
+        <span>Paintings</span><span class="marquee-dot">✦</span>
+        <span>Photo Frames</span><span class="marquee-dot">✦</span>
+        <!-- Duplicate for seamless loop -->
+        <span>Gift Hampers</span><span class="marquee-dot">✦</span>
+        <span>Bouquets</span><span class="marquee-dot">✦</span>
+        <span>Resin Art</span><span class="marquee-dot">✦</span>
+        <span>Crochet</span><span class="marquee-dot">✦</span>
+        <span>Embroidery</span><span class="marquee-dot">✦</span>
+        <span>Jewellery</span><span class="marquee-dot">✦</span>
+        <span>Paintings</span><span class="marquee-dot">✦</span>
+        <span>Photo Frames</span><span class="marquee-dot">✦</span>
+      </div>
+    </div>
+
+    <!-- Categories Section -->
+    <section id="categories" class="categories section">
+      <h2 class="reveal-text">Curated Collections</h2>
+      <div class="grid categories-grid">
+        <div class="card cat-card tilt-card"><h3>Gift Hampers</h3></div>
+        <div class="card cat-card tilt-card"><h3>Bouquets</h3></div>
+        <div class="card cat-card tilt-card"><h3>Resin Art</h3></div>
+        <div class="card cat-card tilt-card"><h3>Crochet</h3></div>
+        <div class="card cat-card tilt-card"><h3>Embroidery</h3></div>
+        <div class="card cat-card tilt-card"><h3>Jewellery</h3></div>
+        <div class="card cat-card tilt-card"><h3>Paintings</h3></div>
+        <div class="card cat-card tilt-card"><h3>Photo Frames</h3></div>
+      </div>
+    </section>
+    </div> <!-- End Floral Aesthetic Section -->
+
+    <!-- Showcase / Bouquets Section -->
+    <section id="showcase" class="showcase section">
+      <div class="showcase-content">
+        <h2 class="reveal-text">Elegant Bouquets</h2>
+        <p>Hand-tied arrangements that speak the language of art.</p>
+      </div>
+      <div class="bouquet-showcase">
+        <div class="bouquet-item tilt-card"><img src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?q=80&w=600&auto=format&fit=crop" alt="Bouquet 1"></div>
+        <div class="bouquet-item tilt-card"><img src="https://images.unsplash.com/photo-1562690868-60bbe7293e94?q=80&w=600&auto=format&fit=crop" alt="Bouquet 2"></div>
+        <div class="bouquet-item tilt-card"><img src="https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?q=80&w=600&auto=format&fit=crop" alt="Bouquet 3"></div>
+      </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section id="shop" class="featured section">
+      <h2 class="reveal-text">Best Sellers</h2>
+      <div class="grid product-grid">
+        <div class="card product-card tilt-card">
+          <div class="img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=500&auto=format&fit=crop');"></div>
+          <div class="prod-info">
+            <h4>Golden Frame</h4>
+            <p>$45.00</p>
+            <button class="btn btn-sm magnetic-btn">Quick View</button>
+          </div>
+        </div>
+        <div class="card product-card tilt-card">
+          <div class="img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1544967082-d9d25d867d66?w=500&auto=format&fit=crop');"></div>
+          <div class="prod-info">
+            <h4>Pastel Resin Tray</h4>
+            <p>$60.00</p>
+            <button class="btn btn-sm magnetic-btn">Quick View</button>
+          </div>
+        </div>
+        <div class="card product-card tilt-card">
+          <div class="img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1611077544810-7451004bb729?w=500&auto=format&fit=crop');"></div>
+          <div class="prod-info">
+            <h4>Custom Crochet Plush</h4>
+            <p>$35.00</p>
+            <button class="btn btn-sm magnetic-btn">Quick View</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Custom Orders -->
+    <section id="custom" class="custom-orders section">
+      <div class="custom-content">
+        <h2 class="reveal-text">Create your own custom gifts</h2>
+        <p>Tailored to your style and occasion.</p>
+        <button class="btn btn-primary magnetic-btn" style="margin-top:2rem;">Request Custom Order</button>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <h2 class="reveal-text">Our Story</h2>
+      <p class="about-text">At sin x artsy, every piece is a labor of love. We believe in the magic of handmade items and the personal touch they bring to every occasion. Our artistic journey is dedicated to crafting unique, premium creations that bring joy and beauty into your life.</p>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials section">
+      <h2 class="reveal-text">Loved by You</h2>
+      <div class="grid test-grid">
+        <div class="card test-card tilt-card">
+          <p>"Absolutely stunning! The resin tray I ordered is a masterpiece."</p>
+          <span>- Sarah J.</span>
+        </div>
+        <div class="card test-card tilt-card">
+          <p>"The gift hamper was perfectly curated. Such elegant packaging!"</p>
+          <span>- Michael T.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery section">
+      <h2 class="reveal-text">Aesthetic Gallery</h2>
+      <div class="gallery-grid">
+        <div class="gal-item" style="background-image: url('https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?w=500&auto=format&fit=crop');"></div>
+        <div class="gal-item gal-wide" style="background-image: url('https://images.unsplash.com/photo-1602164945488-322a0e0a09e4?w=800&auto=format&fit=crop');"></div>
+        <div class="gal-item gal-tall" style="background-image: url('https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?w=500&auto=format&fit=crop');"></div>
+        <div class="gal-item" style="background-image: url('https://images.unsplash.com/photo-1584589167171-5476ce43f2d6?w=500&auto=format&fit=crop');"></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta section">
+      <h2 class="reveal-text">Make Every Moment Special</h2>
+      <p>with Handmade Creations</p>
+      <button class="btn btn-primary magnetic-btn" style="margin-top: 1.5rem;">Shop Now</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-brand">sin x artsy</div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a href="#policies">Policies</a>
+        </div>
+        <div class="socials">
+          <span>Instagram</span>
+          <span>Pinterest</span>
+          <span>Tiktok</span>
+        </div>
+      </div>
+      <p class="copyright">&copy; 2026 sin x artsy. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
