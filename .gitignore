@@ -7,7 +7,19 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
+node_modules/
+
+public/
+
+.venv/
+dist/
+build/
+*.mp4
+*.zip
+*.png
+*.jpg
+*.jpeg
+*.webp
 dist
 dist-ssr
 *.local
